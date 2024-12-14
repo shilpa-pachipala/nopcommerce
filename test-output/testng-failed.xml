@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="chrometest(failed)">
+    <parameter name="os" value="Windows"/>
+    <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="sanity"/>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testcases.TC_003_MyAccountpage">
+        <methods>
+          <include name="teardown"/>
+          <include name="verifyMyaccountpage"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.TC_003_MyAccountpage -->
+      <class name="testcases.TC_001_Register">
+        <methods>
+          <include name="verifyRegisterpage"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.TC_001_Register -->
+      <class name="testcases.TC_002_Login">
+        <methods>
+          <include name="verifylogintest"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.TC_002_Login -->
+    </classes>
+  </test> <!-- chrometest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

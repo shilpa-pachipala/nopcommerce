@@ -1,0 +1,2 @@
+C:\Workspace_S\Java folder\nopcommerce
+mvn test
